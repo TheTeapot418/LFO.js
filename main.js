@@ -16,7 +16,7 @@ function LFO (param) {
 		var d = new Date().getTime();
 		var a = (d - this.startTime) / 1000;
 		var x = this.freq * a;
-		x = x - Math.floor(x / T);
+		x = x - Math.floor(x);
 		
 		return this.amplitude * this.waveform(x * 2 * Math.PI);
 	}
@@ -50,10 +50,10 @@ function loop () {
 	
 	var v = lfo.value();
 	insert(v);
-	ctx.moveTo(0, values[0] + 150);
+	ctx.moveTo(0, -values[0] + 150);
 	
 	for (var i = 1; i < values.length; i++) {
-		ctx.lineTo(i, values[i]+150);
+		ctx.lineTo(i, -values[i]+150);
 	}
 	
 	ctx.stroke();
@@ -61,14 +61,10 @@ function loop () {
 }
 
 var lfo = new LFO({
-	freq: 1,
+	freq: 0.2,
 	amplitude: 100,
 	waveform: function (x) {
-		if (x < Math.PI) {
-			return 1;
-		} else {
-			return -1;
-		}
+		return x / (2 * Math.PI);  //Sawtooth
 	}
 });
 loop();

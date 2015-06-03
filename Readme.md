@@ -8,7 +8,6 @@ LFO stands for Low Frequency Oscillator. It's basically just a device which osci
 
 ##TODO
 
-- Add more math to enable non-periodic functions to be used as waveform (keeping only a given part of the function and looping through that part).
 - Clean up the code
 - Throw the LFO class in a separate file
 - Make an ES6 module (that's going to be fun)
