@@ -36,11 +36,15 @@ function loop () {
 	ctx.closePath();
 }
 
-var lfo = new LFO({
-	freq: 0.2,
-	amplitude: 100,
-	waveform: function (x) {
-		return x / (2 * Math.PI);  //Sawtooth
-	}
+var lfo = new LFO ({
+    freq: 1.3,
+    amplitude: 15,
+    waveform: function (x) {
+        if (x < Math.PI) {
+            return 1;
+        } else {
+            return -1;
+        }
+    }
 });
 loop();

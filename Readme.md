@@ -70,6 +70,4 @@ my_lfo.set({
 ##TODO
 
 - Clean up the code
-- Throw the LFO class in a separate file
 - Make an ES6 module (that's going to be fun)
-- Document
