@@ -12,8 +12,13 @@ function LFO (param) {
 	}
 	
 	this.value = function() {
+		var T = 1 / this.freq;
 		var d = new Date().getTime();
-		return this.amplitude * this.waveform(((d - this.startTime) / 1000) * (this.freq * 2 * Math.PI));
+		var a = (d - this.startTime) / 1000;
+		var x = this.freq * a;
+		x = x - Math.floor(x / T);
+		
+		return this.amplitude * this.waveform(x * 2 * Math.PI);
 	}
 }
 
@@ -56,7 +61,14 @@ function loop () {
 }
 
 var lfo = new LFO({
-	freq: 0.5,
-	amplitude: 100
+	freq: 1,
+	amplitude: 100,
+	waveform: function (x) {
+		if (x < Math.PI) {
+			return 1;
+		} else {
+			return -1;
+		}
+	}
 });
 loop();
