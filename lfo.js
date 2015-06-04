@@ -1,6 +1,8 @@
 function LFO (param) {
 	this.startTime = new Date().getTime();
 	
+	var param = param || {};
+	
 	this.freq = param.freq || 1;
 	this.amplitude = param.amplitude || 1;
 	this.waveform = param.waveform || Math.sin;
