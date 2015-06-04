@@ -37,14 +37,8 @@ function loop () {
 }
 
 var lfo = new LFO ({
-    freq: 1.3,
-    amplitude: 15,
-    waveform: function (x) {
-        if (x < Math.PI) {
-            return 1;
-        } else {
-            return -1;
-        }
-    }
+    freq: 1.2,
+    amplitude: 50,
+    waveform: "sawtooth"
 });
 loop();

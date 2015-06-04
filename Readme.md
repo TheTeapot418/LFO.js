@@ -50,6 +50,10 @@ This code will create a new LFO with a frequency of 1.3Hz, an amplitude of 2 and
 
 *Note: Every parameter is optional*
 
+####Waveform functions
+
+There are some waveform functions that are preset in the library : `sine` (default value), `triangle`, `square`, `sawtooth` and `noise`.
+
 ####Getting the current value
 
 To retrieve the current value of an LFO, just use the `value` function :
