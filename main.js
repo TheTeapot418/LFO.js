@@ -25,7 +25,7 @@ function loop () {
 	ctx.beginPath();
 	
 	lfo.set({
-		amplitude: aux.value()
+		amplitude: 100 + aux.value()
 	});
 	
 	var v = lfo.value();
@@ -42,13 +42,13 @@ function loop () {
 
 var lfo = new LFO ({
     freq: 3,
-    amplitude: 50,
-    waveform: "sine"
+    amplitude: 100,
+    waveform: "square"
 });
 
 var aux = new LFO ({
 	freq: 0.1,
-	amplitude: 50,
+	amplitude: 100,
 	waveform: "sine"
 })
 

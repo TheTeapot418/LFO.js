@@ -105,6 +105,6 @@ function LFO (param) {
 		var x = this.freq * a;
 		x = x - Math.floor(x);
 		
-		return this.amplitude * this.waveform(x * 2 * Math.PI);
+		return (this.amplitude / 2) * this.waveform(x * 2 * Math.PI);
 	}
 }
