@@ -3,50 +3,8 @@ function LFO (param) {
 	
 	var param = param || {};
 	
-	this.freq = param.freq || 1;
-	this.amplitude = param.amplitude || 1;
-	
-	switch (param.waveform) {
-		case "sine":
-			this.waveform = Math.sin;
-			break;
-			
-		case "triangle":
-			this.waveform = function(x) {
-				if (x <= Math.PI) {
-					return x / (Math.PI / 2) - 1;
-				} else {
-					return (x - (Math.PI)) / (-Math.PI / 2) + 1;
-				}
-
-			}
-			break;
-			
-		case "square":
-			this.waveform = function(x) {
-				if (x <= Math.PI) {
-					return -1;
-				} else {
-					return 1;
-				}
-			}
-			break;
-			
-		case "sawtooth":
-			this.waveform = function(x) {
-				return x / (2 * Math.PI);
-			}
-			break;
-			
-		case "noise":
-			this.waveform = function(x) {
-				return Math.random() * 2 - 1;
-			}
-			break;
-			
-		default:
-			this.waveform = param.waveform || Math.sin;
-	}
+	this.freq = 1;
+	this.amplitude = 2;
 	
 	this.set = function (param) {
 		
@@ -95,8 +53,10 @@ function LFO (param) {
 			
 		default:
 			this.waveform = param.waveform || this.waveform;
+		}
 	}
-	}
+	
+	this.set(param);
 	
 	this.value = function() {
 		var T = 1 / this.freq;
