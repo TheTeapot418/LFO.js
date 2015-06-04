@@ -1,3 +1,8 @@
+//lfo.js
+//Created by Guillaume Bauer
+//GitHub repo : http://github.com/TheTeapot418/LFO.js
+//GitHub page : http://theteapot418.github.io
+
 function LFO (param) {
 	this.startTime = new Date().getTime();
 	
