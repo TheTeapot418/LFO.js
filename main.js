@@ -24,6 +24,10 @@ function loop () {
 	ctx.clearRect(0, 0, scene.width, scene.height);
 	ctx.beginPath();
 	
+	lfo.set({
+		amplitude: aux.value()
+	});
+	
 	var v = lfo.value();
 	insert(v);
 	ctx.moveTo(0, -values[0] + 150);
@@ -37,8 +41,15 @@ function loop () {
 }
 
 var lfo = new LFO ({
-    freq: 1.2,
+    freq: 3,
     amplitude: 50,
-    waveform: "sawtooth"
+    waveform: "sine"
 });
+
+var aux = new LFO ({
+	freq: 0.1,
+	amplitude: 50,
+	waveform: "sine"
+})
+
 loop();
