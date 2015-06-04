@@ -41,7 +41,7 @@ function LFO (param) {
 			
 		case "sawtooth":
 			this.waveform = function(x) {
-				return x / (2 * Math.PI);
+				return x / Math.PI - 1;
 			}
 			break;
 			

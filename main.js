@@ -43,7 +43,7 @@ function loop () {
 var lfo = new LFO ({
     freq: 3,
     amplitude: 100,
-    waveform: "square"
+    waveform: "sawtooth"
 });
 
 var aux = new LFO ({
