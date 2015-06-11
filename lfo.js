@@ -72,4 +72,8 @@ function LFO (param) {
 		
 		return (this.amplitude / 2) * this.waveform(x * 2 * Math.PI);
 	}
+	
+	this.reset = function() {
+		this.startTime = new Date().getTime();
+	}
 }
