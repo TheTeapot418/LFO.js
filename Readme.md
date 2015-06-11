@@ -22,7 +22,7 @@ First of all, include the LFO script before your other scripts.
 To create an LFO, you just have to create a new instace of `LFO` :
 
 ```javascript
-var my_lfo = new LFO ({});
+var my_lfo = new LFO ();
 ```
 
 The `LFO` function take an object as argument, containing these parameters :
@@ -37,12 +37,14 @@ var my_lfo = new LFO ({
 	freq: 1.3,
 	amplitude: 2,
 	waveform: function (x) {
-		if (x < Math.PI) {
-			return 1;
-		} else {
+		if (x <= Math.PI) {
 			return -1;
+		} else {
+			return 1;
 		}
 	}
+	//Same as :
+	//waveform: "square"
 });
 ```
 
