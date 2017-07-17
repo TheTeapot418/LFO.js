@@ -1,4 +1,4 @@
-# LFO JS
+# LFO.js
 
 A simple JavaScript library that implements LFOs in JavaScript.
 
