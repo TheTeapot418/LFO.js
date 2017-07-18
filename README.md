@@ -8,6 +8,9 @@ LFO stands for Low Frequency Oscillator - a device which oscillates between two 
 
 *Note: In this library, there is no limitation concerning the frequency, as a result it can behave strangely at a high frequency*
 
+## Example
+Either run the example from cloning the repo, installing with npm and then running `npm run example` or visit [http://theteapot418.github.io/LFO.js/](http://theteapot418.github.io/LFO.js/).
+
 ## Usage
 
 #### Instantiation
