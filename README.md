@@ -12,17 +12,17 @@ LFO stands for Low Frequency Oscillator - a device which oscillates between two 
 
 #### Instantiation
 
-First of all, include LFO:
+First, import LFO:
 
 ```JavaScript
-import LFO from 'lfo';
+import LFO from 'lfo-js';
 ```  
 or  
 ```JavaScript
-var LFO = require('lfo');
+var LFO = require('lfo-js');
 ```
 
-To import LFO in HTML, you can:  
+To include LFO in HTML, you can:  
 ```HTML
 <script src='LFO.js'></script>
 ```  
@@ -31,13 +31,13 @@ and access using
 window.LFO
 ```
 
-To create an LFO, you just have to create a new instance of `LFO`:
+To create an LFO, create a new instance of `LFO`:
 
 ```JavaScript
 const myLfo = new LFO();
 ```
 
-The `LFO` function takes an object as an argument, containing these parameters:
+The `LFO` class takes an object as an argument, containing these parameters:
 
 + `freq`: the frequency of the oscillator
 + `amplitude`: the amplitude of the oscillator

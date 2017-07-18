@@ -29,5 +29,8 @@ module.exports = {
     ],
   },
   devServer: {
+    open: true,
+    contentBase: './docs',
+    openPage: ''
   },
 };
