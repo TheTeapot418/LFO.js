@@ -1,17 +1,17 @@
-#LFO JS
+# LFO JS
 
 This project is a little and simple JavaScript library that will implement LFOs in JavaScript.
 
-##What is an LFO
+## What is an LFO
 
 LFO stands for Low Frequency Oscillator. It's basically just a device which oscillates between two values on a certain frequency and following a given waveform.
 
 *Note: In this library, there is no limitation concerning the frequency, but it can behave strangely at a high frequency*
 
-##How to use it
+## How to use it
 
 
-####Instantiation
+#### Instantiation
 
 First of all, include the LFO script before your other scripts.
 
@@ -52,18 +52,18 @@ This code will create a new LFO with a frequency of 1.3Hz, an amplitude of 2 and
 
 *Note: Every parameter is optional*
 
-####Waveform functions
+#### Waveform functions
 
 There are some waveform functions that are preset in the library : `sine` (default value), `triangle`, `square`, `sawtooth` and `noise`.
 
-####Getting the current value
+#### Getting the current value
 
 To retrieve the current value of an LFO, just use the `value` function :
 
 ```javascript
 var v = my_lfo.value();
 ```
-####Changing parameters
+#### Changing parameters
 
 To change parameters of an LFO, use the `set` function which takes the same argument as the constructor of the class :
 
@@ -73,7 +73,7 @@ my_lfo.set({
 });
 ```
 
-##TODO
+## TODO
 
 - Clean up the code
 - Make an ES6 module (that's going to be fun)
