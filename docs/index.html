@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>LFO.js example</title>
+    <style type='text/css'>
+      html, body {
+        font-family: sans-serif;
+      }
+
+      label {
+        display: block;
+      }
+
+      form {
+        display: inline-block;
+      }
+
+      fieldset {
+        display: inline-block;
+        min-height: 120px;
+        vertical-align: top;
+      }
+    </style>
+  </head>
+  <body>
+    <input type='range' min='-1' max='1' step='0.001' id='input-range'> <input type='number' id='input-number'>
+    <hr>
+    <canvas id='canvas-1'></canvas>
+    <hr>
+    <form id='waveform-form'>
+      <fieldset>
+        <legend>Waveform</legend>
+        <label><input type='radio' name='waveform' value='sine' checked>Sine</label>
+        <label><input type='radio' name='waveform' value='sawtooth'>Sawtooth</label>
+        <label><input type='radio' name='waveform' value='triangle'>Triangle</label>
+        <label><input type='radio' name='waveform' value='square'>Square</label>
+        <label><input type='radio' name='waveform' value='noise'>Noise</label>
+      </fieldset>
+    </form>
+    <fieldset>
+      <legend>Frequency</legend>
+      <label>
+        <input type='range' min='0' max='12' step='0.001' id='input-frequency' value='0.2'>
+          (<span id='frequency-readout'>0.2</span>Hz)
+        </label>
+    </fieldset>
+    <fieldset>
+      <legend>Amplitude</legend>
+      <label>
+        <input type='range' min='0' max='6' step='0.001' id='input-amplitude' value='2'>
+          (<span id='amplitude-readout'>2</span>)
+        </label>
+    </fieldset>
+
+    <script type='text/javascript' src='/LFO.js'></script>
+    <script type='text/javascript' src='app.js'></script>
+  </body>
+</html>
