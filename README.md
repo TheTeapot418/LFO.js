@@ -95,3 +95,6 @@ myLfo.set({
   freq: 0.7
 });
 ```
+
+## Contributors
+ - Sam Wray ([2xAA](https://github.com/2xAA))
